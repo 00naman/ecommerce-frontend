@@ -1,20 +1,11 @@
-// src/api/apiClient.js
 import axios from 'axios';
 
 const apiClient = axios.create({
-    baseURL: process.env.REACT_APP_API_BASE_URL, // Default backend URL
+    baseURL: 'https://ecommcerce-backend.onrender.com',
     headers: {
         'Content-Type': 'application/json',
     },
+    withCredentials: true, // Include cookies if sessions are used
 });
-
-// Add interceptors if needed (optional)
-apiClient.interceptors.request.use(
-    (config) => {
-        // Modify the request if needed (e.g., add auth tokens)
-        return config;
-    },
-    (error) => Promise.reject(error)
-);
 
 export default apiClient;
