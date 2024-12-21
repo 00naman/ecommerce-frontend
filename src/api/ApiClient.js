@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-    baseURL: process.env.REACT_APP_API_BASE_URL || 'https://ecommcerce-backend.onrender.com', // Default backend URL
+    baseURL: process.env.REACT_APP_API_BASE_URL, // Default backend URL
     headers: {
         'Content-Type': 'application/json',
     },
